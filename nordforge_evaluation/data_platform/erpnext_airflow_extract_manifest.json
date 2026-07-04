@@ -1,0 +1,45 @@
+{
+  "manifest_version": "2026.07.03",
+  "company": "NordForge Industrial Group",
+  "purpose": "Candidate ERPNext DocTypes for Airflow ingestion during sandbox evaluation.",
+  "source_system": "ERPNext sandbox",
+  "extract_mode": "api_or_read_replica_to_be_confirmed",
+  "candidate_doctypes": [
+    {
+      "doctype": "Item",
+      "domain": "inventory",
+      "target_dataset": "material_master",
+      "owner_team": "Industrial Inventory Control"
+    },
+    {
+      "doctype": "Warehouse",
+      "domain": "inventory",
+      "target_dataset": "warehouse_master",
+      "owner_team": "Industrial Inventory Control"
+    },
+    {
+      "doctype": "Stock Ledger Entry",
+      "domain": "inventory",
+      "target_dataset": "inventory_movement_ledger",
+      "owner_team": "Industrial Inventory Control"
+    },
+    {
+      "doctype": "Sales Order",
+      "domain": "order_to_cash",
+      "target_dataset": "order_fulfillment",
+      "owner_team": "Customer Service Operations"
+    },
+    {
+      "doctype": "Delivery Note",
+      "domain": "order_to_cash",
+      "target_dataset": "delivery_items",
+      "owner_team": "Logistics Analytics"
+    },
+    {
+      "doctype": "Asset",
+      "domain": "asset_management",
+      "target_dataset": "critical_asset_registry",
+      "owner_team": "Maintenance Reliability"
+    }
+  ]
+}
